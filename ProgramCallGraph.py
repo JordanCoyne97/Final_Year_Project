@@ -9,9 +9,5 @@ def testingMethod(n):
         return n * testingMethod(n - 1)
 
 
-def do_foo():
-    return open('fact.py', 'r')
-
-
 with PyCallGraph(output=GraphvizOutput()):
-    open('fact.py', 'r')
+    testingMethod(5)
