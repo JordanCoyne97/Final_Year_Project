@@ -11,16 +11,17 @@ class VisitNodes(ast.NodeVisitor):
     def __init__(self):
         self.names = []
         self.graph = nx.DiGraph()
+        self.labels = {}
 
     def generic_visit(self, node):
         ast.NodeVisitor.generic_visit(self, node)
 
         self.graph.add_node(node)
-        #self.graph.add_node(type(node).__name__)
+        self.labels[node] = type(node).__name__
 
         for child in ast.iter_child_nodes(node):
+            self.labels[child] = type(child).__name__
             self.graph.add_edge(node, child)
-            #self.graph.add_edge(type(node).__name__, type(child).__name__)
 
 
     def visit_Name(self, node):
@@ -36,7 +37,15 @@ def draw_graph(parsed_ast):
     v.visit(parsed_ast)
 
     pos = graphviz_layout(v.graph, prog='dot')
-    nx.draw(v.graph, pos, with_labels=False, arrows=True)
+
+    print(v.labels)
+
+    nx.draw_networkx_nodes(v.graph, pos)
+    nx.draw_networkx_edges(v.graph, pos)
+    nx.draw_networkx_labels(v.graph, pos, v.labels, font_size=10)
+
+
+
 
     print("Total number of nodes: ", int(v.graph.number_of_nodes()))
     print("Total number of edges: ", int(v.graph.number_of_edges()))
@@ -56,5 +65,4 @@ if __name__ == "__main__":
     file = open_file()
 
     ast_tree = ast.parse(file.read())
-
     draw_graph(ast_tree)
