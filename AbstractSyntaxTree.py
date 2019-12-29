@@ -2,6 +2,7 @@ import ast
 from ast import dump
 import matplotlib.pyplot as plt
 import networkx as nx
+from networkx.drawing.nx_agraph import graphviz_layout
 import warnings
 warnings.filterwarnings("ignore", category=plt.cbook.mplDeprecation)
 
@@ -34,7 +35,8 @@ def draw_graph(parsed_ast):
     v = VisitNodes()
     v.visit(parsed_ast)
 
-    nx.draw_kamada_kawai(v.graph, with_labels=True, node_color='green')
+    pos = graphviz_layout(v.graph, prog='dot')
+    nx.draw(v.graph, pos, with_labels=False, arrows=True)
 
     print("Total number of nodes: ", int(v.graph.number_of_nodes()))
     print("Total number of edges: ", int(v.graph.number_of_edges()))
