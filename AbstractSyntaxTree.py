@@ -1,14 +1,16 @@
 import ast
-from ast import dump
-import matplotlib.pyplot as plt
-import networkx as nx
-from os import path
 import csv
 import sys
-from networkx.drawing.nx_agraph import graphviz_layout
 import warnings
-warnings.filterwarnings("ignore", category=plt.cbook.mplDeprecation)
+from ast import dump
+from os import path
+from random import randint
 
+import matplotlib.pyplot as plt
+import networkx as nx
+from networkx.drawing.nx_agraph import graphviz_layout
+
+warnings.filterwarnings("ignore", category=plt.cbook.mplDeprecation)
 
 class VisitNodes(ast.NodeVisitor):
     def __init__(self):
@@ -20,16 +22,22 @@ class VisitNodes(ast.NodeVisitor):
     def generic_visit(self, node):
         ast.NodeVisitor.generic_visit(self, node)
 
-        self.graph.add_node(node)
-        self.labels[node] = type(node).__name__
+        if type(node).__name__ == "Module":
+            self.graph.add_node(node)
+            self.labels[node] = type(node).__name__
+        else:
+            self.graph.add_node(node)
 
         for child in ast.iter_child_nodes(node):
-            self.graph.add_edge(node, child)
-            self.labels[child] = type(child).__name__
 
-
-    def visit_Name(self, node):
-        self.names.append(node.id)
+            if child in self.labels:
+                new_node = randint(1, 10000000)
+                self.graph.add_node(new_node)
+                self.labels[new_node] = type(child).__name__
+                self.graph.add_edge(node, new_node)
+            else:
+                self.graph.add_edge(node, child)
+                self.labels[child] = type(child).__name__
 
 
 def show_ast(s):
@@ -46,15 +54,14 @@ def draw_graph(parsed_ast, fname):
     nx.draw_networkx_edges(v.graph, pos)
     nx.draw_networkx_labels(v.graph, pos, v.labels, font_size=10)
 
+    print(v.labels)
+
     print("Total number of nodes: ", int(v.graph.number_of_nodes()))
     print("Total number of edges: ", int(v.graph.number_of_edges()))
     print("List of all nodes: ", list(v.labels.values()))
-    print("List of all edges: ", list(v.graph.edges()))
-    # print("In-degree for all nodes: ", dict(v.graph.in_degree))
-    # print("Out degree for all nodes: ", dict(v.graph.out_degree))
 
     create_csv(v, fname)
-    #plt.show()
+    plt.show()
 
 
 def create_csv(v, fname):
@@ -76,12 +83,13 @@ def open_file(file_name):
 
 
 if __name__ == "__main__":
-    fname = "fact.py"
+    fname = "data/fact.py"
     file = open_file(fname)
     ast_tree = ast.parse(file.read())
     draw_graph(ast_tree, fname)
 
-    # for fname in sys.argv[1:]:
-    #     file = open_file(fname)
-    #     ast_tree = ast.parse(file.read())
-    #     draw_graph(ast_tree, fname)
+    for fname in sys.argv[1:]:
+        file = open_file(fname)
+        ast_tree = ast.parse(file.read())
+        show_ast(ast_tree)
+        draw_graph(ast_tree, fname)

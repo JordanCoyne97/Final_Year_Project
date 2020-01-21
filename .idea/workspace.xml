@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06d3b170-b556-4daf-9359-beab9bea0bb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AbstractSyntaxTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractSyntaxTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProgramCallGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProgramCallGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycallgraph.png" beforeDir="false" afterPath="$PROJECT_DIR$/pycallgraph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fact.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/fact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fib.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/fib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +28,16 @@
   <component name="ProjectId" id="1S0aTFL2MyTORhT9XgDD1BKRBya" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data.py" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
