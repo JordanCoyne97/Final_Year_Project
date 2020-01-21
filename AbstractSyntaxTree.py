@@ -12,6 +12,7 @@ from networkx.drawing.nx_agraph import graphviz_layout
 
 warnings.filterwarnings("ignore", category=plt.cbook.mplDeprecation)
 
+
 class VisitNodes(ast.NodeVisitor):
     def __init__(self):
         self.names = []
@@ -31,7 +32,10 @@ class VisitNodes(ast.NodeVisitor):
         for child in ast.iter_child_nodes(node):
 
             if child in self.labels:
-                new_node = randint(1, 10000000)
+                node_name = type(child).__name__
+                random_id = randint(1, 10000000)
+                new_node = str(node_name) + str(random_id)
+
                 self.graph.add_node(new_node)
                 self.labels[new_node] = type(child).__name__
                 self.graph.add_edge(node, new_node)
@@ -53,8 +57,6 @@ def draw_graph(parsed_ast, fname):
     nx.draw_networkx_nodes(v.graph, pos, node_color='#9999ff')
     nx.draw_networkx_edges(v.graph, pos)
     nx.draw_networkx_labels(v.graph, pos, v.labels, font_size=10)
-
-    print(v.labels)
 
     print("Total number of nodes: ", int(v.graph.number_of_nodes()))
     print("Total number of edges: ", int(v.graph.number_of_edges()))
