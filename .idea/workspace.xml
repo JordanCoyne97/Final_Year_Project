@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06d3b170-b556-4daf-9359-beab9bea0bb8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/JordanCoyne.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AbstractSyntaxTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractSyntaxTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fact.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/fact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fib.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/fib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProgramCallGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProgramCallGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fact.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/fact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sean.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycallgraph.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +32,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -153,5 +157,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
