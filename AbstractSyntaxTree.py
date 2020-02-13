@@ -2,6 +2,7 @@ import ast
 import csv
 import sys
 import warnings
+import pydot
 from ast import dump
 from os import path
 from random import randint
@@ -42,7 +43,6 @@ class CallGraph(ast.NodeVisitor):
             self.graph.add_node(node.name)
             self.labels[node.name] = node.name
             self.get_Children(node)
-
 
     def get_Children(self, node):
         for child in ast.iter_child_nodes(node):
@@ -134,12 +134,16 @@ def draw_graph(parsed_ast, fname, switch, draw):
         nx.draw_networkx_labels(v.graph, pos, v.labels, font_size=10)
 
     if switch == 1:  # Call Graph
-        pos2 = graphviz_layout(callGraph.graph)
+        pos2 = graphviz_layout(callGraph.graph, prog='dot')
 
         nx.draw_networkx_nodes(callGraph.graph, pos2, node_color='#b3ffb3')
         nx.draw_networkx_edges(callGraph.graph, pos2)
-        print(list(nx.isolates(callGraph.graph)))
+        # print(list(nx.isolates(callGraph.graph)))
         nx.draw_networkx_labels(callGraph.graph, pos2, callGraph.labels, font_size=10)
+
+        nx.drawing.nx_pydot.write_dot(callGraph.graph, 'graph.dot')
+        (graph,) = pydot.graph_from_dot_file('graph.dot')
+        graph.write_png('CallGraph.png')
 
     create_csv(v, callGraph, fname)
 

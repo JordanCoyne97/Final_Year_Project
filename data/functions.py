@@ -6,7 +6,6 @@ def f():
 
 
 def g():
-    print("test 2")
     l(g)
 
 
