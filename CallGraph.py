@@ -3,12 +3,16 @@ import csv
 import sys
 import warnings
 import pydot
+import requests
 from ast import dump
+from bs4 import BeautifulSoup
 from os import path
 from random import randint
 
 import matplotlib.pyplot as plt
 import networkx as nx
+import pandas as pd
+
 from networkx.drawing.nx_agraph import graphviz_layout
 
 warnings.filterwarnings("ignore", category=plt.cbook.mplDeprecation)
@@ -158,6 +162,29 @@ def draw_graph(parsed_ast, fname, switch, draw):
         plt.show()
 
 
+def find_url_from_csv(target_file):
+    data = pd.read_csv("Python_Recipes.csv")
+    pd.set_option('display.max_colwidth', 1000)  # needed to stop ellipsis ruining code for url
+
+    target_row = data.loc[data["File Name"] == target_file]
+    url = target_row["URL"].to_string(index=False)
+
+    return url
+
+
+def web_scraper(url):
+    source = requests.get(url).text
+    soup = BeautifulSoup(source, 'html5lib')
+
+    tags = soup.find("ul", class_="nomachinetags flat")
+    tags_list = list(tags.stripped_strings)
+
+    author_details = soup.find("table", class_="gravatar")
+    author_name = author_details.a.text
+
+    return tags_list, author_name
+
+
 def get_mode(labels):
     track = {}
 
@@ -175,10 +202,15 @@ def create_csv(v, call_graph, fname):
         with open('results.csv', mode='w') as create_file:
             writer = csv.writer(create_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
-            writer.writerow(['Authour', 'File name', 'Number of nodes.ast', 'Number of edges.ast',
+            writer.writerow(['Author', 'Tags', 'File name', 'Number of nodes.ast', 'Number of edges.ast',
                              'Tree height.ast', 'Most common node.ast', 'Average degree.ast',
                              'Number of nodes.call', 'Number of edges.call', 'Number self loops.call'])
-            writer.writerow(["blank", fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
+
+            target_name = fname.split('/')[1]
+            url = find_url_from_csv(target_name)
+            tags, author = web_scraper(url)
+
+            writer.writerow([author, tags, fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
                              len(nx.dag_longest_path(v.graph)), get_mode(v.labels),
                              v.graph.number_of_edges() / v.graph.number_of_nodes(),
                              call_graph.graph.number_of_nodes(), call_graph.graph.number_of_edges(),
@@ -187,7 +219,12 @@ def create_csv(v, call_graph, fname):
     else:
         with open(r'results.csv', 'a') as file:
             writer = csv.writer(file)
-            writer.writerow(["blank", fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
+
+            target_name = fname.split('/')[1]
+            url = find_url_from_csv(target_name)
+            tags, author = web_scraper(url)
+
+            writer.writerow([author, tags, fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
                              len(nx.dag_longest_path(v.graph)), get_mode(v.labels),
                              v.graph.number_of_edges() / v.graph.number_of_nodes(),
                              call_graph.graph.number_of_nodes(), call_graph.graph.number_of_edges(),
@@ -201,13 +238,12 @@ def open_file(file_name):
 if __name__ == "__main__":
 
     switch = 1
-    draw = True
+    draw = False
 
-    fname = "data/functions.py"
-    file = open_file(fname)
-    ast_tree = ast.parse(file.read())
-    show_ast(ast_tree)
-    draw_graph(ast_tree, fname, switch, draw)
+    # fname = "programs/ScrolledFrame.py"
+    # file = open_file(fname)
+    # ast_tree = ast.parse(file.read())
+    # draw_graph(ast_tree, fname, switch, draw)
 
     for fname in sys.argv[1:]:
         file = open_file(fname)
