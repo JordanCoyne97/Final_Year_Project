@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="06d3b170-b556-4daf-9359-beab9bea0bb8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AbstractSyntaxTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractSyntaxTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProgramCallGraph.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractSyntaxTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CallGraph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +53,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AbstractSyntaxTree">
-    <configuration name="AbstractSyntaxTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.CallGraph">
+    <configuration name="CallGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ProgramCallGraphs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +66,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AbstractSyntaxTree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CallGraph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,13 +118,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.AbstractSyntaxTree" />
+      <item itemvalue="Python.CallGraph" />
       <item itemvalue="Python.graph" />
       <item itemvalue="Python.ProgramCallGraph" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.AbstractSyntaxTree" />
+        <item itemvalue="Python.CallGraph" />
         <item itemvalue="Python.ProgramCallGraph" />
         <item itemvalue="Python.graph" />
       </list>

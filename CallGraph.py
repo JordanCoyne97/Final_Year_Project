@@ -20,7 +20,7 @@ class CallGraph(ast.NodeVisitor):
         self.labels = {}
 
         self.currentFunc = ""
-        self.main = "main"
+        self.main = "__main__"
 
     def generic_visit(self, node):
         ast.NodeVisitor.generic_visit(self, node)
@@ -138,12 +138,19 @@ def draw_graph(parsed_ast, fname, switch, draw):
 
         nx.draw_networkx_nodes(callGraph.graph, pos2, node_color='#b3ffb3')
         nx.draw_networkx_edges(callGraph.graph, pos2)
-        # print(list(nx.isolates(callGraph.graph)))
         nx.draw_networkx_labels(callGraph.graph, pos2, callGraph.labels, font_size=10)
 
-        nx.drawing.nx_pydot.write_dot(callGraph.graph, 'graph.dot')
-        (graph,) = pydot.graph_from_dot_file('graph.dot')
-        graph.write_png('CallGraph.png')
+        file_name = fname.split('.')[0]
+        name = file_name.split('/')[1]
+        dot_file = name + ".dot"
+        image_file = name + ".png"
+
+        image_path = 'CallGraph_images/'
+        dot_path = 'CallGraph_dots/'
+
+        nx.drawing.nx_pydot.write_dot(callGraph.graph, dot_path + dot_file)
+        (graph,) = pydot.graph_from_dot_file(dot_path + dot_file)
+        graph.write_png(image_path + image_file)
 
     create_csv(v, callGraph, fname)
 
