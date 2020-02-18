@@ -1,5 +1,147 @@
 Author,Tags,File name,Number of nodes.ast,Number of edges.ast,Tree height.ast,Most common node.ast,Average degree.ast,Number of nodes.call,Number of edges.call,Number self loops.call
+Jorge Besada,"['ado', 'database']",programs/ADODatabase.py,741,740,15,Load,0.9986504723346828,18,19,1
+Brian Fiedler,"['animation', 'javascript']",programs/AnimateImages.py,457,456,11,Load,0.9978118161925602,17,17,0
+Vasudev Ram,"['cli', 'commandline', 'hug', 'library', 'python', 'python3', 'user_interface', 'web', 'web_server']",programs/CommandLineInterface.py,181,180,9,Load,0.994475138121547,10,11,0
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Vasudev Ram,"['commandline', 'csv', 'data', 'files', 'formats', 'pdf', 'pdf_generation', 'python', 'tsv', 'utilities', 'xtopdf']",programs/DSVtoPDF.py,713,712,11,Load,0.9985974754558204,28,34,0
+yota,['cryptography'],programs/ED25519.py,1288,1287,14,Load,0.9992236024844721,31,55,3
+Emil george james,"['calculator', 'emi', 'python']",programs/EMICalc.py,222,221,15,Load,0.9954954954954955,10,12,0
+Narayana Chikkam,"['cfg', 'first', 'follow', 'nullable']",programs/FollowSetsConstruction.py,1,0,1,Module,0.0,0,0,0
+Malcolm Jeremy Lewis,['(none)'],programs/Hangman.py,1343,1342,14,Load,0.9992553983618764,28,69,2
+Michael Blan Palmer,"['json', 'logging', 'python']",programs/JSONFormattedLogging.py,381,380,11,Load,0.9973753280839895,24,22,1
+Jean Brouwers,"['count', 'lines', 'python2', 'python3', 'source']",programs/LinesOfCode.py,786,785,15,Load,0.9987277353689568,23,29,0
 Miguel Martínez López,"['accordion', 'metro', 'tkinter', 'widget']",programs/MetroAccordion.py,1442,1441,12,Load,0.9993065187239945,44,57,1
 Miguel Martínez López,"['listbox', 'multicolumn', 'table', 'tkinter']",programs/Multicolumn.py,3314,3313,15,Load,0.9996982498491249,93,151,6
+Sander,"['ordered', 'set']",programs/OrderedSet.py,1,0,1,Module,0.0,0,0,0
+Antoni Gual,"['primes', 'python']",programs/PrimesOfInt.py,571,570,12,Load,0.9982486865148862,17,16,0
+Vasudev Ram,"['command', 'commandline', 'data', 'dsv', 'file', 'python', 'utilities', 'utility']",programs/ProcessDel_SepValues.py,651,650,11,Load,0.9984639016897081,23,29,0
+Jorge Besada,"['database', 'python', 'smo', 'sql', 'sqlsmo', 'threading']",programs/PythonSQLSMO.py,1278,1277,16,Load,0.9992175273865415,32,37,0
+Narayana Chikkam,['quinary'],programs/QuadKeyGen.py,398,397,12,Load,0.9974874371859297,16,18,1
+Giampaolo Rodolà,"['exit', 'python', 'signal']",programs/RegisterExitFunction.py,1562,1561,15,Load,0.9993597951344431,61,181,0
+FB36,"['ai', 'algorithm', 'algorithms', 'game', 'games']",programs/ReversiOthello.py,3007,3006,18,Load,0.9996674426338543,25,88,8
+Brandon Martin,"['math', 'numbers', 'numerals', 'roman']",programs/RomanNumeralConvertor.py,546,545,17,Load,0.9981684981684982,11,11,0
 Miguel Martínez López,"['frame', 'scrolling', 'tkinter']",programs/ScrolledFrame.py,1816,1815,15,Load,0.9994493392070485,48,61,2
+David Hollman,"['patterns', 'python', 'singleton']",programs/SingletonPattern.py,388,387,14,Load,0.9974226804123711,21,24,1
+Chathura Gunasekara,"['integers', 'numbers', 'python', 'strings']",programs/SpelledNumToInt.py,1072,1071,13,Load,0.9990671641791045,20,23,0
+Miguel Martínez López,"['entry', 'megawidget', 'tag', 'text', 'tkinter']",programs/TagEntryTkinter.py,1006,1005,18,Load,0.9990059642147118,40,48,1
+Brandon Martin,"['artificial_intelligence', 'game', 'python', 'random', 'tac', 'tic', 'tictactoe', 'toe']",programs/TicTacToe.py,4224,4223,19,Load,0.9997632575757576,56,136,0
 Miguel Martínez López,"['scrollbars', 'table', 'tkinter']",programs/Tkinter.py,3850,3849,15,Load,0.9997402597402597,80,125,2
+Miguel Martínez López,"['gif', 'tkinter']",programs/TkinterGif.py,577,576,13,Load,0.9982668977469671,25,36,7
+Jack Trainor,['tree'],programs/TreeTraversal.py,1,0,1,Module,0.0,0,0,0
+Jorge Besada,"['ado', 'database']",programs/ADODatabase.py,741,740,15,Load,0.9986504723346828,18,19,1
+Brian Fiedler,"['animation', 'javascript']",programs/AnimateImages.py,457,456,11,Load,0.9978118161925602,17,17,0
+Vasudev Ram,"['cli', 'commandline', 'hug', 'library', 'python', 'python3', 'user_interface', 'web', 'web_server']",programs/CommandLineInterface.py,181,180,9,Load,0.994475138121547,10,11,0
+yota,"['memory', 'sizeof']",programs/CompMemoryFootprint.py,234,233,11,Load,0.9957264957264957,18,29,0
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Vasudev Ram,"['commandline', 'csv', 'data', 'files', 'formats', 'pdf', 'pdf_generation', 'python', 'tsv', 'utilities', 'xtopdf']",programs/DSVtoPDF.py,713,712,11,Load,0.9985974754558204,28,34,0
+yota,['cryptography'],programs/ED25519.py,1288,1287,14,Load,0.9992236024844721,31,55,3
+Emil george james,"['calculator', 'emi', 'python']",programs/EMICalc.py,222,221,15,Load,0.9954954954954955,10,12,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+Narayana Chikkam,"['cfg', 'first', 'follow', 'nullable']",programs/FollowSetsConstruction.py,1,0,1,Module,0.0,0,0,0
+Malcolm Jeremy Lewis,['(none)'],programs/Hangman.py,1343,1342,14,Load,0.9992553983618764,28,69,2
+Michael Blan Palmer,"['json', 'logging', 'python']",programs/JSONFormattedLogging.py,381,380,11,Load,0.9973753280839895,24,22,1
+Jean Brouwers,"['count', 'lines', 'python2', 'python3', 'source']",programs/LinesOfCode.py,786,785,15,Load,0.9987277353689568,23,29,0
+Miguel Martínez López,"['accordion', 'metro', 'tkinter', 'widget']",programs/MetroAccordion.py,1442,1441,12,Load,0.9993065187239945,44,57,1
+Miguel Martínez López,"['listbox', 'multicolumn', 'table', 'tkinter']",programs/Multicolumn.py,3314,3313,15,Load,0.9996982498491249,93,151,6
+Sander,"['ordered', 'set']",programs/OrderedSet.py,1,0,1,Module,0.0,0,0,0
+Antoni Gual,"['primes', 'python']",programs/PrimesOfInt.py,571,570,12,Load,0.9982486865148862,17,16,0
+Vasudev Ram,"['command', 'commandline', 'data', 'dsv', 'file', 'python', 'utilities', 'utility']",programs/ProcessDel_SepValues.py,651,650,11,Load,0.9984639016897081,23,29,0
+Jorge Besada,"['database', 'python', 'smo', 'sql', 'sqlsmo', 'threading']",programs/PythonSQLSMO.py,1278,1277,16,Load,0.9992175273865415,32,37,0
+Narayana Chikkam,['quinary'],programs/QuadKeyGen.py,398,397,12,Load,0.9974874371859297,16,18,1
+Giampaolo Rodolà,"['exit', 'python', 'signal']",programs/RegisterExitFunction.py,1562,1561,15,Load,0.9993597951344431,61,181,0
+FB36,"['ai', 'algorithm', 'algorithms', 'game', 'games']",programs/ReversiOthello.py,3007,3006,18,Load,0.9996674426338543,25,88,8
+Brandon Martin,"['math', 'numbers', 'numerals', 'roman']",programs/RomanNumeralConvertor.py,546,545,17,Load,0.9981684981684982,11,11,0
+Miguel Martínez López,"['frame', 'scrolling', 'tkinter']",programs/ScrolledFrame.py,1816,1815,15,Load,0.9994493392070485,48,61,2
+David Hollman,"['patterns', 'python', 'singleton']",programs/SingletonPattern.py,388,387,14,Load,0.9974226804123711,21,24,1
+Chathura Gunasekara,"['integers', 'numbers', 'python', 'strings']",programs/SpelledNumToInt.py,1072,1071,13,Load,0.9990671641791045,20,23,0
+Miguel Martínez López,"['entry', 'megawidget', 'tag', 'text', 'tkinter']",programs/TagEntryTkinter.py,1006,1005,18,Load,0.9990059642147118,40,48,1
+Brandon Martin,"['artificial_intelligence', 'game', 'python', 'random', 'tac', 'tic', 'tictactoe', 'toe']",programs/TicTacToe.py,4224,4223,19,Load,0.9997632575757576,56,136,0
+Miguel Martínez López,"['scrollbars', 'table', 'tkinter']",programs/Tkinter.py,3850,3849,15,Load,0.9997402597402597,80,125,2
+Miguel Martínez López,"['gif', 'tkinter']",programs/TkinterGif.py,577,576,13,Load,0.9982668977469671,25,36,7
+Ronald,"['chart', 'strip']",programs/TkniterStripChart.py,761,760,12,Load,0.9986859395532195,28,37,1
+Jorge Besada,"['ado', 'database']",programs/ADODatabase.py,741,740,15,Load,0.9986504723346828,18,19,1
+Brian Fiedler,"['animation', 'javascript']",programs/AnimateImages.py,457,456,11,Load,0.9978118161925602,17,17,0
+Vasudev Ram,"['cli', 'commandline', 'hug', 'library', 'python', 'python3', 'user_interface', 'web', 'web_server']",programs/CommandLineInterface.py,181,180,9,Load,0.994475138121547,10,11,0
+yota,"['memory', 'sizeof']",programs/CompMemoryFootprint.py,234,233,11,Load,0.9957264957264957,18,29,0
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Vasudev Ram,"['commandline', 'csv', 'data', 'files', 'formats', 'pdf', 'pdf_generation', 'python', 'tsv', 'utilities', 'xtopdf']",programs/DSVtoPDF.py,713,712,11,Load,0.9985974754558204,28,34,0
+yota,['cryptography'],programs/ED25519.py,1288,1287,14,Load,0.9992236024844721,31,55,3
+Emil george james,"['calculator', 'emi', 'python']",programs/EMICalc.py,222,221,15,Load,0.9954954954954955,10,12,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+Narayana Chikkam,"['cfg', 'first', 'follow', 'nullable']",programs/FollowSetsConstruction.py,1,0,1,Module,0.0,0,0,0
+Malcolm Jeremy Lewis,['(none)'],programs/Hangman.py,1343,1342,14,Load,0.9992553983618764,28,69,2
+Michael Blan Palmer,"['json', 'logging', 'python']",programs/JSONFormattedLogging.py,381,380,11,Load,0.9973753280839895,24,22,1
+Jean Brouwers,"['count', 'lines', 'python2', 'python3', 'source']",programs/LinesOfCode.py,786,785,15,Load,0.9987277353689568,23,29,0
+Miguel Martínez López,"['accordion', 'metro', 'tkinter', 'widget']",programs/MetroAccordion.py,1442,1441,12,Load,0.9993065187239945,44,57,1
+Miguel Martínez López,"['listbox', 'multicolumn', 'table', 'tkinter']",programs/Multicolumn.py,3314,3313,15,Load,0.9996982498491249,93,151,6
+Sander,"['ordered', 'set']",programs/OrderedSet.py,1,0,1,Module,0.0,0,0,0
+Antoni Gual,"['primes', 'python']",programs/PrimesOfInt.py,571,570,12,Load,0.9982486865148862,17,16,0
+Vasudev Ram,"['command', 'commandline', 'data', 'dsv', 'file', 'python', 'utilities', 'utility']",programs/ProcessDel_SepValues.py,651,650,11,Load,0.9984639016897081,23,29,0
+Jorge Besada,"['database', 'python', 'smo', 'sql', 'sqlsmo', 'threading']",programs/PythonSQLSMO.py,1278,1277,16,Load,0.9992175273865415,32,37,0
+Narayana Chikkam,['quinary'],programs/QuadKeyGen.py,398,397,12,Load,0.9974874371859297,16,18,1
+Giampaolo Rodolà,"['exit', 'python', 'signal']",programs/RegisterExitFunction.py,1562,1561,15,Load,0.9993597951344431,61,181,0
+FB36,"['ai', 'algorithm', 'algorithms', 'game', 'games']",programs/ReversiOthello.py,3007,3006,18,Load,0.9996674426338543,25,88,8
+Brandon Martin,"['math', 'numbers', 'numerals', 'roman']",programs/RomanNumeralConvertor.py,546,545,17,Load,0.9981684981684982,11,11,0
+Miguel Martínez López,"['frame', 'scrolling', 'tkinter']",programs/ScrolledFrame.py,1816,1815,15,Load,0.9994493392070485,48,61,2
+David Hollman,"['patterns', 'python', 'singleton']",programs/SingletonPattern.py,388,387,14,Load,0.9974226804123711,21,24,1
+Chathura Gunasekara,"['integers', 'numbers', 'python', 'strings']",programs/SpelledNumToInt.py,1072,1071,13,Load,0.9990671641791045,20,23,0
+Miguel Martínez López,"['entry', 'megawidget', 'tag', 'text', 'tkinter']",programs/TagEntryTkinter.py,1006,1005,18,Load,0.9990059642147118,40,48,1
+Brandon Martin,"['artificial_intelligence', 'game', 'python', 'random', 'tac', 'tic', 'tictactoe', 'toe']",programs/TicTacToe.py,4224,4223,19,Load,0.9997632575757576,56,136,0
+Miguel Martínez López,"['scrollbars', 'table', 'tkinter']",programs/Tkinter.py,3849,3849,15,Load,1.0,80,125,2
+Miguel Martínez López,"['gif', 'tkinter']",programs/TkinterGif.py,577,576,13,Load,0.9982668977469671,25,36,7
+Ronald,"['chart', 'strip']",programs/TkniterStripChart.py,761,760,12,Load,0.9986859395532195,28,37,1
+Jorge Besada,"['ado', 'database']",programs/ADODatabase.py,741,740,15,Load,0.9986504723346828,18,19,1
+Brian Fiedler,"['animation', 'javascript']",programs/AnimateImages.py,457,456,11,Load,0.9978118161925602,17,17,0
+Vasudev Ram,"['cli', 'commandline', 'hug', 'library', 'python', 'python3', 'user_interface', 'web', 'web_server']",programs/CommandLineInterface.py,181,180,9,Load,0.994475138121547,10,11,0
+yota,"['memory', 'sizeof']",programs/CompMemoryFootprint.py,234,233,11,Load,0.9957264957264957,18,29,0
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Vasudev Ram,"['commandline', 'csv', 'data', 'files', 'formats', 'pdf', 'pdf_generation', 'python', 'tsv', 'utilities', 'xtopdf']",programs/DSVtoPDF.py,713,712,11,Load,0.9985974754558204,28,34,0
+yota,['cryptography'],programs/ED25519.py,1288,1287,14,Load,0.9992236024844721,31,55,3
+Emil george james,"['calculator', 'emi', 'python']",programs/EMICalc.py,222,221,15,Load,0.9954954954954955,10,12,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+Narayana Chikkam,"['cfg', 'first', 'follow', 'nullable']",programs/FollowSetsConstruction.py,1,0,1,Module,0.0,0,0,0
+Malcolm Jeremy Lewis,['(none)'],programs/Hangman.py,1343,1342,14,Load,0.9992553983618764,28,69,2
+Michael Blan Palmer,"['json', 'logging', 'python']",programs/JSONFormattedLogging.py,381,380,11,Load,0.9973753280839895,24,22,1
+Jean Brouwers,"['count', 'lines', 'python2', 'python3', 'source']",programs/LinesOfCode.py,786,785,15,Load,0.9987277353689568,23,29,0
+Miguel Martínez López,"['accordion', 'metro', 'tkinter', 'widget']",programs/MetroAccordion.py,1442,1441,12,Load,0.9993065187239945,44,57,1
+Miguel Martínez López,"['listbox', 'multicolumn', 'table', 'tkinter']",programs/Multicolumn.py,3314,3313,15,Load,0.9996982498491249,93,151,6
+Sander,"['ordered', 'set']",programs/OrderedSet.py,1,0,1,Module,0.0,0,0,0
+Antoni Gual,"['primes', 'python']",programs/PrimesOfInt.py,571,570,12,Load,0.9982486865148862,17,16,0
+Vasudev Ram,"['command', 'commandline', 'data', 'dsv', 'file', 'python', 'utilities', 'utility']",programs/ProcessDel_SepValues.py,651,650,11,Load,0.9984639016897081,23,29,0
+Jorge Besada,"['database', 'python', 'smo', 'sql', 'sqlsmo', 'threading']",programs/PythonSQLSMO.py,1278,1277,16,Load,0.9992175273865415,32,37,0
+Narayana Chikkam,['quinary'],programs/QuadKeyGen.py,398,397,12,Load,0.9974874371859297,16,18,1
+Giampaolo Rodolà,"['exit', 'python', 'signal']",programs/RegisterExitFunction.py,1562,1561,15,Load,0.9993597951344431,61,181,0
+FB36,"['ai', 'algorithm', 'algorithms', 'game', 'games']",programs/ReversiOthello.py,3007,3006,18,Load,0.9996674426338543,25,88,8
+Brandon Martin,"['math', 'numbers', 'numerals', 'roman']",programs/RomanNumeralConvertor.py,546,545,17,Load,0.9981684981684982,11,11,0
+Miguel Martínez López,"['frame', 'scrolling', 'tkinter']",programs/ScrolledFrame.py,1816,1815,15,Load,0.9994493392070485,48,61,2
+David Hollman,"['patterns', 'python', 'singleton']",programs/SingletonPattern.py,388,387,14,Load,0.9974226804123711,21,24,1
+Chathura Gunasekara,"['integers', 'numbers', 'python', 'strings']",programs/SpelledNumToInt.py,1072,1071,13,Load,0.9990671641791045,20,23,0
+Miguel Martínez López,"['entry', 'megawidget', 'tag', 'text', 'tkinter']",programs/TagEntryTkinter.py,1006,1005,18,Load,0.9990059642147118,40,48,1
+Brandon Martin,"['artificial_intelligence', 'game', 'python', 'random', 'tac', 'tic', 'tictactoe', 'toe']",programs/TicTacToe.py,4224,4223,19,Load,0.9997632575757576,56,136,0
+Miguel Martínez López,"['scrollbars', 'table', 'tkinter']",programs/Tkinter.py,3850,3849,15,Load,0.9997402597402597,80,125,2
+Miguel Martínez López,"['gif', 'tkinter']",programs/TkinterGif.py,577,576,13,Load,0.9982668977469671,25,36,7
+Ronald,"['chart', 'strip']",programs/TkniterStripChart.py,761,760,12,Load,0.9986859395532195,28,37,1
+Jorge Besada,"['ado', 'database']",programs/ADODatabase.py,741,740,15,Load,0.9986504723346828,18,19,1
+Brian Fiedler,"['animation', 'javascript']",programs/AnimateImages.py,457,456,11,Load,0.9978118161925602,17,17,0
+Vasudev Ram,"['cli', 'commandline', 'hug', 'library', 'python', 'python3', 'user_interface', 'web', 'web_server']",programs/CommandLineInterface.py,181,180,9,Load,0.994475138121547,10,11,0
+yota,"['memory', 'sizeof']",programs/CompMemoryFootprint.py,234,233,11,Load,0.9957264957264957,18,29,0
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Brandon Martin,"['artificial_intelligence', 'game', 'python', 'random', 'tac', 'tic', 'tictactoe', 'toe']",programs/TicTacToe.py,4224,4223,19,Load,0.9997632575757576,56,136,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,9,8,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,9,8,0
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+Malcolm Jeremy Lewis,['(none)'],programs/Connect4.py,887,886,12,Load,0.9988726042841037,22,36,1
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,6,6,1
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,Load,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,0.99,6,5,1
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,0.99,5,4,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,25,24,6,0.96,3,2,0
+John,"['factorial', 'loop', 'loops', 'math', 'range', 'simple']",programs/Fact.py,100,99,10,0.99,5,4,0

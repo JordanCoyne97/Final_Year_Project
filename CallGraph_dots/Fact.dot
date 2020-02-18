@@ -1,0 +1,11 @@
+strict digraph  {
+fact;
+eval;
+input;
+range;
+print;
+fact -> eval;
+fact -> input;
+fact -> range;
+fact -> print;
+}

@@ -1,0 +1,36 @@
+strict digraph  {
+makeanim;
+split;
+read;
+open;
+strip;
+sort;
+reverse;
+len;
+range;
+write;
+close;
+__main__;
+ArgumentParser;
+add_argument;
+parse_args;
+print_help;
+print;
+makeanim -> split;
+makeanim -> read;
+makeanim -> open;
+makeanim -> strip;
+makeanim -> sort;
+makeanim -> reverse;
+makeanim -> len;
+makeanim -> range;
+makeanim -> write;
+makeanim -> close;
+__main__ -> ArgumentParser;
+__main__ -> add_argument;
+__main__ -> parse_args;
+__main__ -> len;
+__main__ -> print_help;
+__main__ -> makeanim;
+__main__ -> print;
+}

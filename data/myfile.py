@@ -1,11 +1,12 @@
-def f():
+def foo():
+    a = 5
+    boo()
+
+
+def boo():
     print()
 
 
-def test():
-    f()
+c = 6
+foo()
 
-
-if __name__ == "__main__":
-
-    f()

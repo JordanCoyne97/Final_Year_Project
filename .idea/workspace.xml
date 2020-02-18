@@ -4,11 +4,8 @@
     <list default="true" id="06d3b170-b556-4daf-9359-beab9bea0bb8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CallGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallGraph_dots/MetroAccordion.dot" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph_dots/MetroAccordion.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallGraph_dots/Multicolumn.dot" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph_dots/Multicolumn.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallGraph_dots/ScrolledFrame.dot" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph_dots/ScrolledFrame.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CallGraph_dots/Tkinter.dot" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph_dots/Tkinter.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Recipes.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Recipes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Recipes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/myfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/myfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

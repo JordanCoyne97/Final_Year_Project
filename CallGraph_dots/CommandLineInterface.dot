@@ -1,0 +1,23 @@
+strict digraph  {
+get_disk_partition_data;
+disk_partitions;
+format;
+str;
+pdp;
+cli;
+get;
+local;
+pyver;
+__main__;
+get_disk_partition_data -> disk_partitions;
+get_disk_partition_data -> format;
+get_disk_partition_data -> str;
+pdp -> get_disk_partition_data;
+pdp -> cli;
+pdp -> get;
+pdp -> local;
+pyver -> cli;
+pyver -> get;
+pyver -> local;
+__main__ -> cli;
+}

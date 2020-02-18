@@ -48,6 +48,7 @@ class CallGraph(ast.NodeVisitor):
             self.labels[node.name] = node.name
             self.get_Children(node)
 
+
     def get_Children(self, node):
         for child in ast.iter_child_nodes(node):
             if type(child).__name__ == "Call":
@@ -61,13 +62,8 @@ class CallGraph(ast.NodeVisitor):
                         self.labels[child.func.attr] = child.func.attr
 
                     except AttributeError:
-                        try:
-                            self.graph.add_edge(self.currentFunc, child.func.name)
-                            self.labels[child.func.name] = child.func.name
-
-                        except AttributeError:
-                            self.graph.add_edge(self.currentFunc, child)
-                            self.labels[child] = type(child).__name__
+                        self.graph.add_edge(self.currentFunc, child)
+                        self.labels[child] = type(child).__name__
 
             self.get_Children(child)
 
@@ -185,25 +181,13 @@ def web_scraper(url):
     return tags_list, author_name
 
 
-def get_mode(labels):
-    track = {}
-
-    for key, value in labels.items():
-        if value not in track:
-            track[value] = 0
-        else:
-            track[value] += 1
-
-    return max(track, key=track.get)
-
-
 def create_csv(v, call_graph, fname):
     if not path.exists('results.csv'):
         with open('results.csv', mode='w') as create_file:
             writer = csv.writer(create_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
             writer.writerow(['Author', 'Tags', 'File name', 'Number of nodes.ast', 'Number of edges.ast',
-                             'Tree height.ast', 'Most common node.ast', 'Average degree.ast',
+                             'Tree height.ast', 'Average degree.ast',
                              'Number of nodes.call', 'Number of edges.call', 'Number self loops.call'])
 
             target_name = fname.split('/')[1]
@@ -211,7 +195,7 @@ def create_csv(v, call_graph, fname):
             tags, author = web_scraper(url)
 
             writer.writerow([author, tags, fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
-                             len(nx.dag_longest_path(v.graph)), get_mode(v.labels),
+                             len(nx.dag_longest_path(v.graph)),
                              v.graph.number_of_edges() / v.graph.number_of_nodes(),
                              call_graph.graph.number_of_nodes(), call_graph.graph.number_of_edges(),
                              call_graph.graph.number_of_selfloops()])
@@ -225,7 +209,7 @@ def create_csv(v, call_graph, fname):
             tags, author = web_scraper(url)
 
             writer.writerow([author, tags, fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
-                             len(nx.dag_longest_path(v.graph)), get_mode(v.labels),
+                             len(nx.dag_longest_path(v.graph)),
                              v.graph.number_of_edges() / v.graph.number_of_nodes(),
                              call_graph.graph.number_of_nodes(), call_graph.graph.number_of_edges(),
                              call_graph.graph.number_of_selfloops()])
@@ -238,14 +222,16 @@ def open_file(file_name):
 if __name__ == "__main__":
 
     switch = 1
-    draw = False
+    draw = True
 
-    # fname = "programs/ScrolledFrame.py"
-    # file = open_file(fname)
-    # ast_tree = ast.parse(file.read())
-    # draw_graph(ast_tree, fname, switch, draw)
+    fname = "programs/Fact.py"
+    file = open_file(fname)
+    ast_tree = ast.parse(file.read())
+    show_ast(ast_tree)
+    draw_graph(ast_tree, fname, switch, draw)
 
     for fname in sys.argv[1:]:
         file = open_file(fname)
+        print("Processing: " + str(fname) + " ...")
         ast_tree = ast.parse(file.read())
         draw_graph(ast_tree, fname, switch, draw)

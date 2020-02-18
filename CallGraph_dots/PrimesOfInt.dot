@@ -1,0 +1,35 @@
+strict digraph  {
+brent;
+randint;
+range;
+min;
+abs;
+gcd;
+factorize;
+append;
+sort;
+main;
+len;
+int;
+eval;
+input;
+print;
+reduce;
+__main__;
+brent -> randint;
+brent -> range;
+brent -> min;
+brent -> abs;
+brent -> gcd;
+factorize -> append;
+factorize -> brent;
+factorize -> sort;
+main -> len;
+main -> int;
+main -> eval;
+main -> input;
+main -> factorize;
+main -> print;
+main -> reduce;
+__main__ -> main;
+}

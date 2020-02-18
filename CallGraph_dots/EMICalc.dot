@@ -1,0 +1,24 @@
+strict digraph  {
+get_loan_amount;
+input;
+get_interest_rate;
+get_payment_period;
+calc_interest_rate;
+print;
+calc_emi;
+pow;
+__main__;
+EMI_CALCULATOR;
+get_loan_amount -> input;
+get_interest_rate -> input;
+get_payment_period -> input;
+calc_interest_rate -> get_interest_rate;
+calc_interest_rate -> print;
+calc_emi -> get_loan_amount;
+calc_emi -> get_payment_period;
+calc_emi -> calc_interest_rate;
+calc_emi -> print;
+calc_emi -> pow;
+__main__ -> EMI_CALCULATOR;
+__main__ -> calc_emi;
+}

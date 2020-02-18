@@ -1,0 +1,7 @@
+strict digraph  {
+foo;
+boo;
+print;
+foo -> boo;
+boo -> print;
+}
