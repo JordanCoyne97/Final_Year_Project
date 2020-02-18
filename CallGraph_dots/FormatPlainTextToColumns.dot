@@ -1,0 +1,37 @@
+strict digraph  {
+__init__;
+len;
+format_line;
+compile;
+enumerate;
+strip;
+match;
+format;
+rstrip;
+lstrip;
+append;
+join;
+findall;
+__str__;
+wrap;
+FormatColumns;
+__init__ -> len;
+format_line -> compile;
+format_line -> enumerate;
+format_line -> len;
+format_line -> strip;
+format_line -> match;
+format_line -> format;
+format_line -> rstrip;
+format_line -> lstrip;
+format_line -> append;
+format_line -> join;
+format -> compile;
+format -> enumerate;
+format -> findall;
+format -> format_line;
+format -> append;
+format -> join;
+__str__ -> format;
+wrap -> FormatColumns;
+}

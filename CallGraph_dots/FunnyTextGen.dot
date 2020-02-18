@@ -1,0 +1,36 @@
+strict digraph  {
+__init__;
+range;
+len;
+append;
+list;
+keys;
+random_text;
+choice;
+StringIO;
+write;
+getvalue;
+__main__;
+read;
+open;
+sub;
+TextGenerator;
+close;
+__init__ -> range;
+__init__ -> len;
+__init__ -> append;
+__init__ -> list;
+__init__ -> keys;
+random_text -> choice;
+random_text -> StringIO;
+random_text -> write;
+random_text -> range;
+random_text -> getvalue;
+__main__ -> read;
+__main__ -> open;
+__main__ -> sub;
+__main__ -> TextGenerator;
+__main__ -> random_text;
+__main__ -> write;
+__main__ -> close;
+}

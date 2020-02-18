@@ -1,0 +1,35 @@
+strict digraph  {
+map_reduce;
+mapper;
+append;
+items;
+reducer;
+describe;
+len;
+min;
+max;
+fsum;
+Summary;
+height_by_gender_and_agegroup;
+__main__;
+namedtuple;
+Person;
+pprint;
+print;
+testmod;
+map_reduce -> mapper;
+map_reduce -> append;
+map_reduce -> items;
+map_reduce -> reducer;
+describe -> len;
+describe -> min;
+describe -> max;
+describe -> fsum;
+describe -> Summary;
+__main__ -> namedtuple;
+__main__ -> Person;
+__main__ -> pprint;
+__main__ -> map_reduce;
+__main__ -> print;
+__main__ -> testmod;
+}

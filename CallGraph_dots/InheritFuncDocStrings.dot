@@ -1,0 +1,32 @@
+digraph  {
+get_docstring;
+getattr;
+hasattr;
+inherits_docstring_func;
+decorator;
+inherits_docstring;
+isinstance;
+__init__;
+helps_docstrings;
+items;
+setattr;
+super;
+get_docstring -> getattr;
+get_docstring -> hasattr;
+inherits_docstring_func -> get_docstring;
+inherits_docstring_func -> hasattr;
+decorator -> inherits_docstring;
+inherits_docstring -> isinstance;
+inherits_docstring -> inherits_docstring;
+inherits_docstring -> inherits_docstring_func;
+__init__ -> __init__;
+__init__ -> super;
+__init__ -> items;
+__init__ -> isinstance;
+__init__ -> inherits_docstring;
+__init__ -> setattr;
+helps_docstrings -> items;
+helps_docstrings -> isinstance;
+helps_docstrings -> inherits_docstring;
+helps_docstrings -> setattr;
+}

@@ -1,0 +1,17 @@
+digraph  {
+itersubclasses;
+isinstance;
+TypeError;
+set;
+__subclasses__;
+add;
+__main__;
+testmod;
+itersubclasses -> isinstance;
+itersubclasses -> TypeError;
+itersubclasses -> set;
+itersubclasses -> __subclasses__;
+itersubclasses -> add;
+itersubclasses -> itersubclasses;
+__main__ -> testmod;
+}

@@ -1,0 +1,28 @@
+strict digraph  {
+value;
+function;
+delta;
+calculateDigits;
+len;
+append;
+calculate;
+reverse;
+dump;
+print;
+main;
+__main__;
+value -> function;
+delta -> function;
+calculateDigits -> len;
+calculateDigits -> append;
+calculate -> calculateDigits;
+calculate -> reverse;
+dump -> print;
+main -> value;
+main -> calculate;
+main -> print;
+main -> len;
+main -> delta;
+main -> dump;
+__main__ -> main;
+}

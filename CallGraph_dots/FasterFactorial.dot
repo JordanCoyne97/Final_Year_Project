@@ -1,0 +1,20 @@
+strict digraph  {
+factorial;
+len;
+range;
+append;
+main;
+print;
+timeit;
+Timer;
+hasattr;
+__main__;
+factorial -> len;
+factorial -> range;
+factorial -> append;
+main -> print;
+main -> timeit;
+main -> Timer;
+main -> hasattr;
+__main__ -> main;
+}

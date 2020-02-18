@@ -1,2 +1,31 @@
 strict digraph  {
+__init__;
+__len__;
+len;
+__contains__;
+add;
+discard;
+pop;
+__iter__;
+__reversed__;
+KeyError;
+__repr__;
+list;
+__eq__;
+isinstance;
+set;
+__main__;
+OrderedSet;
+print;
+__len__ -> len;
+discard -> pop;
+pop -> KeyError;
+pop -> discard;
+__repr__ -> list;
+__eq__ -> isinstance;
+__eq__ -> len;
+__eq__ -> list;
+__eq__ -> set;
+__main__ -> OrderedSet;
+__main__ -> print;
 }

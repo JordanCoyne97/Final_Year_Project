@@ -1,0 +1,17 @@
+strict digraph  {
+cache_generator;
+mapping_get;
+original_function;
+make_cache;
+next;
+__main__;
+print;
+p;
+cache_generator -> mapping_get;
+cache_generator -> original_function;
+make_cache -> cache_generator;
+make_cache -> next;
+__main__ -> make_cache;
+__main__ -> print;
+__main__ -> p;
+}

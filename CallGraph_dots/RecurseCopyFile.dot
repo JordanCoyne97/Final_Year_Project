@@ -1,0 +1,23 @@
+digraph  {
+copytree;
+isdir;
+exists;
+makedirs;
+listdir;
+join;
+copyfile;
+main;
+__main__;
+copytree -> isdir;
+copytree -> exists;
+copytree -> makedirs;
+copytree -> listdir;
+copytree -> copytree;
+copytree -> join;
+copytree -> copyfile;
+main -> listdir;
+main -> join;
+main -> isdir;
+main -> copytree;
+__main__ -> main;
+}
