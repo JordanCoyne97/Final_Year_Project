@@ -4,6 +4,7 @@ import sys
 import warnings
 import pydot
 import requests
+import os
 from ast import dump
 from bs4 import BeautifulSoup
 from os import path
@@ -34,20 +35,22 @@ class CallGraph(ast.NodeVisitor):
                 if type(child).__name__ == "If":
                     for child2 in ast.iter_child_nodes(child):
                         if type(child2).__name__ == "Compare":
-                            if child2.left.id == "__name__":
-                                for i, j in zip(child2.ops, child2.comparators):
-                                    if type(i).__name__ == "Eq" and j.s == "__main__":
-                                        self.currentFunc = self.main
-                                        self.graph.add_node(self.main)
-                                        self.labels[self.main] = self.main
-                                        self.get_Children(child)
+                            try:
+                                if child2.left.id == "__name__":
+                                    for i, j in zip(child2.ops, child2.comparators):
+                                        if type(i).__name__ == "Eq" and j.s == "__main__":
+                                            self.currentFunc = self.main
+                                            self.graph.add_node(self.main)
+                                            self.labels[self.main] = self.main
+                                            self.get_Children(child)
+                            except AttributeError:
+                                print("Error with attribute while visiting main class (Call Graph). ")
 
         if type(node).__name__ == "FunctionDef":
             self.currentFunc = node.name
             self.graph.add_node(node.name)
             self.labels[node.name] = node.name
             self.get_Children(node)
-
 
     def get_Children(self, node):
         for child in ast.iter_child_nodes(node):
@@ -187,17 +190,17 @@ def create_csv(v, call_graph, fname):
             writer = csv.writer(create_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
             writer.writerow(['Author', 'Tags', 'File name', 'Number of nodes.ast', 'Number of edges.ast',
-                             'Tree height.ast', 'Average degree.ast',
-                             'Number of nodes.call', 'Number of edges.call', 'Number self loops.call'])
+                             'Tree height.ast', 'Number of nodes.call', 'Number of edges.call',
+                             'Average degree.call', 'Number of self loops.call'])
 
             target_name = fname.split('/')[1]
             url = find_url_from_csv(target_name)
             tags, author = web_scraper(url)
 
-            writer.writerow([author, tags, fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
+            writer.writerow([author, tags, target_name, v.graph.number_of_nodes(), v.graph.number_of_edges(),
                              len(nx.dag_longest_path(v.graph)),
-                             v.graph.number_of_edges() / v.graph.number_of_nodes(),
                              call_graph.graph.number_of_nodes(), call_graph.graph.number_of_edges(),
+                             call_graph.graph.number_of_edges() / call_graph.graph.number_of_nodes(),
                              call_graph.graph.number_of_selfloops()])
 
     else:
@@ -208,11 +211,15 @@ def create_csv(v, call_graph, fname):
             url = find_url_from_csv(target_name)
             tags, author = web_scraper(url)
 
-            writer.writerow([author, tags, fname, v.graph.number_of_nodes(), v.graph.number_of_edges(),
+            writer.writerow([author, tags, target_name, v.graph.number_of_nodes(), v.graph.number_of_edges(),
                              len(nx.dag_longest_path(v.graph)),
-                             v.graph.number_of_edges() / v.graph.number_of_nodes(),
                              call_graph.graph.number_of_nodes(), call_graph.graph.number_of_edges(),
+                             call_graph.graph.number_of_edges() / call_graph.graph.number_of_nodes(),
                              call_graph.graph.number_of_selfloops()])
+
+
+def reset_results():
+    os.remove("results.csv")
 
 
 def open_file(file_name):
@@ -222,13 +229,15 @@ def open_file(file_name):
 if __name__ == "__main__":
 
     switch = 1
-    draw = True
+    draw = False
 
-    fname = "programs/Fact.py"
-    file = open_file(fname)
-    ast_tree = ast.parse(file.read())
-    show_ast(ast_tree)
-    draw_graph(ast_tree, fname, switch, draw)
+    reset_results()
+
+    # fname = "programs/Fact.py"
+    # file = open_file(fname)
+    # ast_tree = ast.parse(file.read())
+    # show_ast(ast_tree)
+    # draw_graph(ast_tree, fname, switch, draw)
 
     for fname in sys.argv[1:]:
         file = open_file(fname)
