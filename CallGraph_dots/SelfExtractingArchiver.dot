@@ -20,7 +20,7 @@ min;
 build_bz2_extractor;
 build_zlib_extractor;
 build_b64_extractor;
-__main__;
+Module;
 main -> pack;
 main -> print;
 main -> format;
@@ -46,5 +46,5 @@ build_zlib_extractor -> print;
 build_zlib_extractor -> format;
 build_b64_extractor -> print;
 build_b64_extractor -> format;
-__main__ -> main;
+Module -> main;
 }

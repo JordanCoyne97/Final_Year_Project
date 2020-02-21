@@ -1,5 +1,4 @@
 digraph  {
-__init__;
 getNext;
 generateQuadKeys;
 join;
@@ -13,7 +12,9 @@ test_quadKeys_10;
 QuadKeyGenerator;
 next;
 assertTrue;
-__main__;
+Module;
+"QuadKeyGenerator.__init__";
+"QuadKeyGeneratorTest.__init__";
 main;
 generateQuadKeys -> join;
 generateQuadKeys -> str;
@@ -32,5 +33,12 @@ test_quadKeys_10 -> generateQKItertools;
 test_quadKeys_10 -> range;
 test_quadKeys_10 -> next;
 test_quadKeys_10 -> assertTrue;
-__main__ -> main;
+Module -> "QuadKeyGenerator.__init__";
+Module -> "QuadKeyGeneratorTest.__init__";
+Module -> main;
+"QuadKeyGenerator.__init__" -> getNext;
+"QuadKeyGenerator.__init__" -> generateQuadKeys;
+"QuadKeyGenerator.__init__" -> generateQK;
+"QuadKeyGenerator.__init__" -> generateQKItertools;
+"QuadKeyGeneratorTest.__init__" -> test_quadKeys_10;
 }

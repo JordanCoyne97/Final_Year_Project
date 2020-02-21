@@ -27,7 +27,7 @@ main;
 len;
 getopt;
 func;
-__main__;
+Module;
 usage -> nagios_return;
 usage -> format;
 usage -> test_list;
@@ -60,5 +60,5 @@ main -> getopt;
 main -> get_func;
 main -> func;
 main -> nagios_return;
-__main__ -> main;
+Module -> main;
 }

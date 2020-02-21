@@ -1,9 +1,5 @@
-digraph  {
-__init__;
-StringVar;
+strict digraph  {
 makeWidgets;
-strftime;
-localtime;
 Label;
 pack;
 Entry;
@@ -37,12 +33,8 @@ wm_attributes;
 StopWatch;
 Button;
 mainloop;
-__main__;
-__init__ -> __init__;
-__init__ -> StringVar;
-__init__ -> makeWidgets;
-__init__ -> strftime;
-__init__ -> localtime;
+Module;
+"StopWatch.__init__";
 makeWidgets -> Label;
 makeWidgets -> pack;
 makeWidgets -> Entry;
@@ -78,5 +70,15 @@ main -> StopWatch;
 main -> pack;
 main -> Button;
 main -> mainloop;
-__main__ -> main;
+Module -> "StopWatch.__init__";
+Module -> main;
+"StopWatch.__init__" -> makeWidgets;
+"StopWatch.__init__" -> _update;
+"StopWatch.__init__" -> _setTime;
+"StopWatch.__init__" -> _setLapTime;
+"StopWatch.__init__" -> Start;
+"StopWatch.__init__" -> Stop;
+"StopWatch.__init__" -> Reset;
+"StopWatch.__init__" -> Lap;
+"StopWatch.__init__" -> GravaCSV;
 }

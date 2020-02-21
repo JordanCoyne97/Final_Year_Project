@@ -7,7 +7,7 @@ islower;
 print;
 index;
 len;
-__main__;
+Module;
 rot13 -> input;
 rot13 -> isupper;
 rot13 -> encrypt;
@@ -15,5 +15,5 @@ rot13 -> islower;
 rot13 -> print;
 encrypt -> index;
 encrypt -> len;
-__main__ -> rot13;
+Module -> rot13;
 }

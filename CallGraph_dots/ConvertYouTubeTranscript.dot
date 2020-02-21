@@ -19,7 +19,7 @@ rstrip;
 join;
 write;
 print;
-__main__;
+Module;
 parseLine -> match;
 parseLine -> group;
 formatSrtTime -> split;
@@ -43,5 +43,5 @@ main -> write;
 main -> printSrtLine;
 main -> print;
 main -> format;
-__main__ -> main;
+Module -> main;
 }

@@ -15,7 +15,7 @@ eval;
 input;
 print;
 reduce;
-__main__;
+Module;
 brent -> randint;
 brent -> range;
 brent -> min;
@@ -31,5 +31,5 @@ main -> input;
 main -> factorize;
 main -> print;
 main -> reduce;
-__main__ -> main;
+Module -> main;
 }

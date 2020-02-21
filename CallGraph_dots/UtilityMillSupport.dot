@@ -33,7 +33,7 @@ float;
 repr;
 list;
 create_whitespace;
-__main__;
+Module;
 hard_test -> generate_test;
 hard_test -> captured_stdout;
 hard_test -> run;
@@ -104,5 +104,5 @@ create_whitespace -> randint;
 create_whitespace -> len;
 create_whitespace -> append;
 create_whitespace -> join;
-__main__ -> soft_test;
+Module -> soft_test;
 }

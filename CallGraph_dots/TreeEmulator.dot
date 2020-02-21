@@ -16,7 +16,7 @@ append;
 isfile;
 islink;
 enumerate;
-__main__;
+Module;
 main -> len;
 main -> upper;
 main -> tree;
@@ -40,5 +40,5 @@ walk -> listdir;
 walk -> walk;
 enumerate2 -> len;
 enumerate2 -> enumerate;
-__main__ -> main;
+Module -> main;
 }

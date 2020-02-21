@@ -8,7 +8,7 @@ print;
 timeit;
 Timer;
 hasattr;
-__main__;
+Module;
 factorial -> len;
 factorial -> range;
 factorial -> append;
@@ -16,5 +16,5 @@ main -> print;
 main -> timeit;
 main -> Timer;
 main -> hasattr;
-__main__ -> main;
+Module -> main;
 }

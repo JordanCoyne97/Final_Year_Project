@@ -1,5 +1,4 @@
 strict digraph  {
-__init__;
 __len__;
 len;
 __contains__;
@@ -14,7 +13,8 @@ list;
 __eq__;
 isinstance;
 set;
-__main__;
+Module;
+"OrderedSet.__init__";
 OrderedSet;
 print;
 __len__ -> len;
@@ -26,6 +26,16 @@ __eq__ -> isinstance;
 __eq__ -> len;
 __eq__ -> list;
 __eq__ -> set;
-__main__ -> OrderedSet;
-__main__ -> print;
+Module -> "OrderedSet.__init__";
+Module -> OrderedSet;
+Module -> print;
+"OrderedSet.__init__" -> __len__;
+"OrderedSet.__init__" -> __contains__;
+"OrderedSet.__init__" -> add;
+"OrderedSet.__init__" -> discard;
+"OrderedSet.__init__" -> __iter__;
+"OrderedSet.__init__" -> __reversed__;
+"OrderedSet.__init__" -> pop;
+"OrderedSet.__init__" -> __repr__;
+"OrderedSet.__init__" -> __eq__;
 }

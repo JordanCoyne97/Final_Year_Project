@@ -22,7 +22,7 @@ min;
 isfile;
 remove;
 rmdir;
-__main__;
+Module;
 main -> len;
 main -> isdir;
 main -> destroy;
@@ -46,5 +46,5 @@ try_rename -> join;
 try_rename -> dirname;
 try_rename -> uuid4;
 try_rename -> rename;
-__main__ -> main;
+Module -> main;
 }

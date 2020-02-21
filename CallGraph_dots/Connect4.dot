@@ -1,5 +1,4 @@
 digraph  {
-__init__;
 set_up;
 len;
 append;
@@ -21,6 +20,8 @@ choice;
 sleep;
 play2;
 cycle;
+Module;
+"Game.__init__";
 set_up -> len;
 set_up -> append;
 set_up -> lower;
@@ -57,4 +58,15 @@ cycle -> play1_com;
 cycle -> play2;
 cycle -> play1;
 cycle -> print;
+Module -> "Game.__init__";
+"Game.__init__" -> set_up;
+"Game.__init__" -> display;
+"Game.__init__" -> display2;
+"Game.__init__" -> play1;
+"Game.__init__" -> check_full;
+"Game.__init__" -> check_map;
+"Game.__init__" -> insert;
+"Game.__init__" -> play1_com;
+"Game.__init__" -> play2;
+"Game.__init__" -> cycle;
 }

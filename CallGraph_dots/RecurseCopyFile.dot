@@ -7,7 +7,7 @@ listdir;
 join;
 copyfile;
 main;
-__main__;
+Module;
 copytree -> isdir;
 copytree -> exists;
 copytree -> makedirs;
@@ -19,5 +19,5 @@ main -> listdir;
 main -> join;
 main -> isdir;
 main -> copytree;
-__main__ -> main;
+Module -> main;
 }

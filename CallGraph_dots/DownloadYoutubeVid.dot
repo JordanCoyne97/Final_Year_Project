@@ -31,7 +31,7 @@ download_progress;
 int;
 getheader;
 urlretrieve;
-__main__;
+Module;
 main -> len;
 main -> usage;
 main -> list;
@@ -91,6 +91,6 @@ download_progress -> write;
 download_progress -> replace;
 download_progress -> int;
 download_progress -> flush;
-__main__ -> main;
-__main__ -> print;
+Module -> main;
+Module -> print;
 }

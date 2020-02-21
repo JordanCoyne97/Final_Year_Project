@@ -18,7 +18,7 @@ read;
 open;
 print;
 format;
-__main__;
+Module;
 compress -> set;
 compress -> len;
 compress -> sample;
@@ -47,5 +47,5 @@ test -> compress;
 test -> format;
 test -> decompress;
 test -> decode;
-__main__ -> test;
+Module -> test;
 }

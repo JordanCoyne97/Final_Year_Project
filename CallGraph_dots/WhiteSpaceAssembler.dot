@@ -54,7 +54,7 @@ input;
 read;
 basename;
 sleep;
-__main__;
+Module;
 parse -> process_virtual;
 parse -> process_control;
 parse -> tuple;
@@ -139,5 +139,5 @@ handle_close -> basename;
 handle_close -> print;
 handle_close -> len;
 handle_close -> sleep;
-__main__ -> main;
+Module -> main;
 }

@@ -21,7 +21,7 @@ lower;
 chr;
 close;
 open;
-__main__;
+Module;
 err_write -> write;
 error_exit -> err_write;
 error_exit -> exit;
@@ -50,5 +50,5 @@ main -> read_dsv;
 main -> close;
 main -> open;
 main -> repr;
-__main__ -> main;
+Module -> main;
 }

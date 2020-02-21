@@ -27,7 +27,7 @@ split;
 main;
 testmod;
 b64encode;
-__main__;
+Module;
 is_prime -> range_func;
 is_prime -> randrange;
 is_prime -> pow;
@@ -78,5 +78,5 @@ main -> encode;
 main -> decode;
 main -> b64encode;
 main -> key_to_str;
-__main__ -> main;
+Module -> main;
 }

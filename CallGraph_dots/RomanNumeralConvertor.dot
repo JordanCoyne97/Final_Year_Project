@@ -10,6 +10,8 @@ TypeError;
 pop;
 index;
 join;
+Module;
+"IllegalCharacterError.__init__";
 romanToNumber -> IllegalCharacterError;
 romanToNumber -> format;
 romanToNumber -> len;
@@ -21,4 +23,5 @@ numberToRoman -> pop;
 numberToRoman -> range;
 numberToRoman -> index;
 numberToRoman -> join;
+Module -> "IllegalCharacterError.__init__";
 }

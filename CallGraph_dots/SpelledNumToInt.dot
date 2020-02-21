@@ -19,6 +19,10 @@ len;
 reverse;
 RangeError;
 join;
+Module;
+"UnknownKeyError.__init__";
+"RangeError.__init__";
+"FloatingPointError.__init__";
 isNumber -> str;
 isNumber -> int;
 str_to_int -> split;
@@ -42,4 +46,7 @@ int_to_str -> reverse;
 int_to_str -> int;
 int_to_str -> RangeError;
 int_to_str -> join;
+Module -> "UnknownKeyError.__init__";
+Module -> "RangeError.__init__";
+Module -> "FloatingPointError.__init__";
 }

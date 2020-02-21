@@ -8,7 +8,7 @@ cli;
 get;
 local;
 pyver;
-__main__;
+Module;
 get_disk_partition_data -> disk_partitions;
 get_disk_partition_data -> format;
 get_disk_partition_data -> str;
@@ -19,5 +19,5 @@ pdp -> local;
 pyver -> cli;
 pyver -> get;
 pyver -> local;
-__main__ -> cli;
+Module -> cli;
 }

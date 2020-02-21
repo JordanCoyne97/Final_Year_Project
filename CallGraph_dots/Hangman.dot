@@ -1,5 +1,4 @@
 digraph  {
-__init__;
 set_up;
 input;
 fill_memory;
@@ -27,6 +26,8 @@ play;
 shuffle;
 rrange;
 int;
+Module;
+"Game.__init__";
 set_up -> input;
 set_up -> fill_memory;
 set_up -> print;
@@ -96,4 +97,18 @@ play -> display2;
 play -> input;
 play -> clear;
 play -> main;
+Module -> "Game.__init__";
+"Game.__init__" -> set_up;
+"Game.__init__" -> clear;
+"Game.__init__" -> fill_memory;
+"Game.__init__" -> display1;
+"Game.__init__" -> check_bank;
+"Game.__init__" -> create;
+"Game.__init__" -> clear_all_memory;
+"Game.__init__" -> delete_word;
+"Game.__init__" -> view;
+"Game.__init__" -> display2;
+"Game.__init__" -> edit;
+"Game.__init__" -> play;
+"Game.__init__" -> main;
 }
