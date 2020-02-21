@@ -25,7 +25,9 @@ class CallGraph(ast.NodeVisitor):
         self.labels = {}
 
         self.currentFunc = ""
-        self.main = "__main__"
+        self.main = "Module"
+        self.module = "Module"
+        self.currentClass = ""
 
     def generic_visit(self, node):
         ast.NodeVisitor.generic_visit(self, node)
@@ -46,7 +48,20 @@ class CallGraph(ast.NodeVisitor):
                             except AttributeError:
                                 print("Error with attribute while visiting main class (Call Graph). ")
 
-        if type(node).__name__ == "FunctionDef":
+                if type(child).__name__ == "ClassDef":
+                    self.currentClass = child.name + ".__init__"
+                    self.labels[self.currentClass] = self.currentClass
+
+                    self.graph.add_edge(self.main, self.currentClass)
+
+                    for child2 in ast.iter_child_nodes(child):
+                        if type(child2).__name__ == "FunctionDef":
+                            if not child2.name == "__init__":
+                                self.currentFunc = child2.name
+                                self.labels[self.currentFunc] = child2.name
+                                self.graph.add_edge(self.currentClass, self.currentFunc)
+
+        if type(node).__name__ == "FunctionDef" and not node.name == "__init__":
             self.currentFunc = node.name
             self.graph.add_node(node.name)
             self.labels[node.name] = node.name
@@ -67,6 +82,25 @@ class CallGraph(ast.NodeVisitor):
                     except AttributeError:
                         self.graph.add_edge(self.currentFunc, child)
                         self.labels[child] = type(child).__name__
+
+            self.get_Children(child)
+
+    def get_ChildrenClass(self, node):
+        for child in ast.iter_child_nodes(node):
+            if type(child).__name__ == "Call":
+                try:
+                    self.graph.add_edge(self.currentClass, child.func.id)
+                    self.labels[child.func.id] = child.func.id
+
+                except AttributeError:
+                    try:
+                        self.graph.add_edge(self.currentClass, child.func.attr)
+                        self.labels[child.func.attr] = child.func.attr
+
+                    except AttributeError:
+                        self.graph.add_edge(self.currentClass, child)
+                        self.labels[child] = type(child).__name__
+                        print(type(child).__name__)
 
             self.get_Children(child)
 
@@ -219,7 +253,8 @@ def create_csv(v, call_graph, fname):
 
 
 def reset_results():
-    os.remove("results.csv")
+    if path.exists('results.csv'):
+        os.remove("results.csv")
 
 
 def open_file(file_name):
@@ -233,7 +268,7 @@ if __name__ == "__main__":
 
     reset_results()
 
-    # fname = "programs/Fact.py"
+    # fname = "programs/BloomFilter.py"
     # file = open_file(fname)
     # ast_tree = ast.parse(file.read())
     # show_ast(ast_tree)
