@@ -4,7 +4,7 @@ Jorge Besada,"['ado', 'database']",ADODatabase.py,741,740,15,17,23,1.35294117647
 Aaron Riekenberg,['network'],ASIOProxy.py,981,980,12,39,56,1.435897435897436,1
 Brian Fiedler,"['animation', 'javascript']",AnimateImages.py,457,456,11,17,17,1.0,0
 Jan Kaliszewski,"['auxiliary', 'class', 'clos', 'decorator', 'inheritance', 'method', 'object', 'super']",AuxiliaryMethods.py,1100,1099,13,54,75,1.3888888888888888,1
-Stephen Chappell,"['experiment', 'generator', 'images', 'proof_of_concept', 'test']",BitMapMaker.py,4813,4812,16,67,126,1.8805970149253732,1
+Stephen Chappell,"['experiment', 'generator', 'images', 'proof_of_concept', 'test']",BitMapMaker.py,4812,4812,16,67,126,1.8805970149253732,1
 elazar,['calculation'],BladeOffer_Method.py,597,596,12,28,33,1.1785714285714286,0
 sivarama sarma,"['big_table', 'bloom_filter', 'sets', 'spelling_checker', 'spell_checker']",BloomFilter.py,583,582,12,32,38,1.1875,0
 Raymond Hettinger,"['cache', 'memoization']",CachingDecorator.py,287,286,13,21,38,1.8095238095238095,1
