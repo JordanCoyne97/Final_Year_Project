@@ -25,7 +25,6 @@ class CallGraph(ast.NodeVisitor):
         self.labels = {}
 
         self.currentFunc = ""
-        self.main = "Module"
         self.module = "Module"
         self.currentClass = ""
 
@@ -41,9 +40,9 @@ class CallGraph(ast.NodeVisitor):
                                 if child2.left.id == "__name__":
                                     for i, j in zip(child2.ops, child2.comparators):
                                         if type(i).__name__ == "Eq" and j.s == "__main__":
-                                            self.currentFunc = self.main
-                                            self.graph.add_node(self.main)
-                                            self.labels[self.main] = self.main
+                                            self.currentFunc = self.module
+                                            self.graph.add_node(self.module)
+                                            self.labels[self.module] = self.module
                                             self.get_Children(child)
                             except AttributeError:
                                 print("Error with attribute while visiting main class (Call Graph). ")
@@ -52,7 +51,7 @@ class CallGraph(ast.NodeVisitor):
                     self.currentClass = child.name + ".__init__"
                     self.labels[self.currentClass] = self.currentClass
 
-                    self.graph.add_edge(self.main, self.currentClass)
+                    self.graph.add_edge(self.module, self.currentClass)
 
                     for child2 in ast.iter_child_nodes(child):
                         if type(child2).__name__ == "FunctionDef":
@@ -82,25 +81,6 @@ class CallGraph(ast.NodeVisitor):
                     except AttributeError:
                         self.graph.add_edge(self.currentFunc, child)
                         self.labels[child] = type(child).__name__
-
-            self.get_Children(child)
-
-    def get_ChildrenClass(self, node):
-        for child in ast.iter_child_nodes(node):
-            if type(child).__name__ == "Call":
-                try:
-                    self.graph.add_edge(self.currentClass, child.func.id)
-                    self.labels[child.func.id] = child.func.id
-
-                except AttributeError:
-                    try:
-                        self.graph.add_edge(self.currentClass, child.func.attr)
-                        self.labels[child.func.attr] = child.func.attr
-
-                    except AttributeError:
-                        self.graph.add_edge(self.currentClass, child)
-                        self.labels[child] = type(child).__name__
-                        print(type(child).__name__)
 
             self.get_Children(child)
 
@@ -252,6 +232,22 @@ def create_csv(v, call_graph, fname):
                              call_graph.graph.number_of_selfloops()])
 
 
+def create_stats_figures():
+    if path.exists('results.csv'):
+        data = pd.read_csv("results.csv")
+
+        data.plot(kind='scatter', x='Number of nodes.ast', y='Number of nodes.call', color='magenta')
+        plt.suptitle('Scatter plot comparing number of nodes')
+        plt.savefig('Stats/number of ast vs call nodes.png')
+
+        data.plot(kind='scatter', x='Number of nodes.ast', y='Tree height.ast', color='blue')
+        plt.suptitle('Scatter plot comparing ast nodes to tree height')
+        plt.savefig('Stats/ast nodes vs tree height.png')
+
+        data.plot(kind='hist', x='Number of nodes.ast', y='Tree height.ast')
+        plt.savefig('Stats/hist.png')
+
+
 def reset_results():
     if path.exists('results.csv'):
         os.remove("results.csv")
@@ -279,3 +275,5 @@ if __name__ == "__main__":
         print("Processing: " + str(fname) + " ...")
         ast_tree = ast.parse(file.read())
         draw_graph(ast_tree, fname, switch, draw)
+
+    create_stats_figures()
