@@ -5,7 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CallGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CallGraph_dots/HTML5Parser.dot" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph_dots/HTML5Parser.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CallGraph_images/4CubesPuzzle.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CallGraph_images/HTML5Parser.png" beforeDir="false" afterPath="$PROJECT_DIR$/CallGraph_images/HTML5Parser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stats/ast nodes vs tree height.png" beforeDir="false" afterPath="$PROJECT_DIR$/Stats/ast nodes vs tree height.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stats/number of ast vs call nodes.png" beforeDir="false" afterPath="$PROJECT_DIR$/Stats/number of ast vs call nodes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/myfile.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,10 +38,15 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Demo_images" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo_images" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />

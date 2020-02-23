@@ -24,8 +24,8 @@ class CallGraph(ast.NodeVisitor):
         self.graph = nx.DiGraph()
         self.labels = {}
 
-        self.currentFunc = ""
         self.module = "Module"
+        self.currentFunc = ""
         self.currentClass = ""
 
     def generic_visit(self, node):
@@ -124,16 +124,13 @@ class VisitNodes(ast.NodeVisitor):
                     if type(child).__name__ == "Num":
                         self.graph.add_edge(node, child)
                         self.labels[child] = child.n
-                    if type(child).__name__ == "Str":
-                        self.graph.add_edge(node, child)
-                        self.labels[child] = child.s
+                    # Prints the whole string e.g print("all of this will show on the ast graph")
+                    # if type(child).__name__ == "Str":
+                    #     self.graph.add_edge(node, child)
+                    #     self.labels[child] = child.s
                     else:
                         self.graph.add_edge(node, child)
                         self.labels[child] = type(child).__name__
-
-
-def show_ast(s):
-    print(dump(s))
 
 
 def draw_graph(parsed_ast, fname, switch, draw):
@@ -143,36 +140,45 @@ def draw_graph(parsed_ast, fname, switch, draw):
     callGraph = CallGraph()
     callGraph.visit(parsed_ast)
 
-    if switch == 0:  # AST
+    if switch == 0:  # AST draw graph
+        plt.figure(figsize=(14, 6.6))
         pos = graphviz_layout(v.graph, prog='dot')
 
         nx.draw_networkx_nodes(v.graph, pos, node_color='#9999ff')
         nx.draw_networkx_edges(v.graph, pos)
         nx.draw_networkx_labels(v.graph, pos, v.labels, font_size=10)
 
-    if switch == 1:  # Call Graph
+    if switch == 1:  # Call Graph draw graph
+        plt.figure(figsize=(14, 6.6))
         pos2 = graphviz_layout(callGraph.graph, prog='dot')
 
         nx.draw_networkx_nodes(callGraph.graph, pos2, node_color='#b3ffb3')
         nx.draw_networkx_edges(callGraph.graph, pos2)
         nx.draw_networkx_labels(callGraph.graph, pos2, callGraph.labels, font_size=10)
 
-        file_name = fname.split('.')[0]
-        name = file_name.split('/')[1]
-        dot_file = name + ".dot"
-        image_file = name + ".png"
+    if switch == 2:  # Pass both (draw neither)
+        pass
 
-        image_path = 'CallGraph_images/'
-        dot_path = 'CallGraph_dots/'
-
-        nx.drawing.nx_pydot.write_dot(callGraph.graph, dot_path + dot_file)
-        (graph,) = pydot.graph_from_dot_file(dot_path + dot_file)
-        graph.write_png(image_path + image_file)
-
+    save_call_graph_image(fname, callGraph)
     create_csv(v, callGraph, fname)
 
     if draw:
+        plt.tight_layout()
         plt.show()
+
+
+def save_call_graph_image(fname, callGraph):
+    file_name = fname.split('.')[0]
+    name = file_name.split('/')[1]
+    dot_file = name + ".dot"
+    image_file = name + ".png"
+
+    image_path = 'CallGraph_images/'
+    dot_path = 'CallGraph_dots/'
+
+    nx.drawing.nx_pydot.write_dot(callGraph.graph, dot_path + dot_file)
+    (graph,) = pydot.graph_from_dot_file(dot_path + dot_file)
+    graph.write_png(image_path + image_file)
 
 
 def find_url_from_csv(target_file):
@@ -186,6 +192,10 @@ def find_url_from_csv(target_file):
 
 
 def web_scraper(url):
+
+    if url is None:
+        return
+
     source = requests.get(url).text
     soup = BeautifulSoup(source, 'html5lib')
 
@@ -257,20 +267,25 @@ def open_file(file_name):
     return open(file_name, 'r')
 
 
+def show_ast(s):
+    print(dump(s))
+
+
 if __name__ == "__main__":
 
-    switch = 1
+    switch = 2
     draw = False
 
     reset_results()
 
-    # fname = "programs/BloomFilter.py"
-    # file = open_file(fname)
-    # ast_tree = ast.parse(file.read())
-    # show_ast(ast_tree)
-    # draw_graph(ast_tree, fname, switch, draw)
+    fname = "programs/BloomFilter.py"
+    file = open_file(fname)
+    ast_tree = ast.parse(file.read())
+    show_ast(ast_tree)
+    draw_graph(ast_tree, fname, switch, draw)
 
     for fname in sys.argv[1:]:
+
         file = open_file(fname)
         print("Processing: " + str(fname) + " ...")
         ast_tree = ast.parse(file.read())
