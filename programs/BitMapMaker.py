@@ -465,7 +465,7 @@ class BitMap(object):
         #f.write( longToString( 54 + 256*4 + self.ht*self.wd ) )   # DWORD size in bytes of the file
         f.write( longToString( 54 + self.ht*(self.wd*3 + line_padding) ) )   # DWORD size in bytes of the file
         f.write( longToString( 0 ) )    # DWORD 0
-        #f.write( longToString( 54 + 256*4 ) )    # DWORD offset to the data
+        #f.write( longToString( 54 + 256*4 ) )    # DWORD offset to the Demo_programs
         f.write( longToString( 54  ) )
         f.write( longToString( 40 ) )    # DWORD header size = 40
         f.write( longToString( self.wd ) )    # DWORD image width
@@ -504,7 +504,7 @@ class BitMap(object):
         f.write("BM")
         f.write(longToString(54 + 256 * 4 + self.ht * self.wd))  # DWORD size in bytes of the file
         f.write(longToString(0))  # DWORD 0
-        f.write(longToString(54 + 256 * 4))  # DWORD offset to the data
+        f.write(longToString(54 + 256 * 4))  # DWORD offset to the Demo_programs
         f.write(longToString(40))  # DWORD header size = 40
         f.write(longToString(self.wd))  # DWORD image width
         f.write(longToString(self.ht))  # DWORD image height

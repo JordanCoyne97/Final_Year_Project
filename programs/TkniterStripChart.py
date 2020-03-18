@@ -74,11 +74,11 @@ class StripChart(tk.Frame):
             self._trackHist['ticklabel'].append(objId)
 
     def configTrackColors(self, **trackColors):
-        # Change plotted data color
+        # Change plotted Demo_programs color
         for trackName, colorName in trackColors.items():
             self._canvas.itemconfigure(trackName, fill=colorName)
 
-        # Change settings so future data has the new color
+        # Change settings so future Demo_programs has the new color
         self._trackColor.update(trackColors)
 
 

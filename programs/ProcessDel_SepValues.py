@@ -6,7 +6,7 @@ Author: Vasudev Ram
 Web site: https://vasudevram.github.io
 Blog: https://jugad2.blogspot.com
 Product store: https://gumroad.com/vasudevram
-Purpose: Shows how to read DSV data, i.e. 
+Purpose: Shows how to read DSV Demo_programs, i.e. 
 
 https://en.wikipedia.org/wiki/Delimiter-separated_values 
 
@@ -36,7 +36,7 @@ def error_exit(message):
 
 def usage(argv, verbose=False):
     usage1 = \
-        "{}: read and process DSV (Delimiter-Separated-Values) data.\n".format(argv[0])
+        "{}: read and process DSV (Delimiter-Separated-Values) Demo_programs.\n".format(argv[0])
     usage2 = "Usage: python" + \
              " {} [ -c delim_char | -n delim_code ] [ dsv_file ] ...\n".format(argv[0])
     usage3 = [

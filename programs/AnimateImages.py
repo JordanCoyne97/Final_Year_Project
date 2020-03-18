@@ -16,7 +16,7 @@ __author__ = 'Brian Fiedler'
 #
 # myanimator.html wll be viewable in a browser, but you may want to add more html to it.
 # Or you can embed myanimator.html within another web page, with html code like:
-# <object type="text/html" data="myanimator.html" width="930" height="680" >error message here</object>
+# <object type="text/html" Demo_programs="myanimator.html" width="930" height="680" >error message here</object>
 # (The width and height in the above example is for 900x600 images, with controls at the bottom.)
 #
 # Alternative to using janim.py from the command line:

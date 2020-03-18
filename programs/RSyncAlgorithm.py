@@ -42,7 +42,7 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096):
     """
     Generates a binary patch when supplied with the weak and strong
     hashes from an unpatched target and a readable stream for the
-    up-to-date data. The blocksize must be the same as the value
+    up-to-date Demo_programs. The blocksize must be the same as the value
     used to generate remotesignatures.
     """
     remote_weak, remote_strong = remotesignatures
@@ -62,7 +62,7 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096):
         try:
             # If there are two identical weak checksums in a file, and the
             # matching strong hash does not occur at the first match, it will
-            # be missed and the data sent over. May fix eventually, but this
+            # be missed and the Demo_programs sent over. May fix eventually, but this
             # problem arises very rarely.
             matchblock = remote_weak.index(checksum, matchblock + 1)
             stronghash = hashlib.md5(bytes(window)).hexdigest()
@@ -84,7 +84,7 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096):
                     newbyte = ord(datastream.read(1))
                     window.append(newbyte)
             except TypeError:
-                # No more data from the file; the window will slowly shrink.
+                # No more Demo_programs from the file; the window will slowly shrink.
                 # newbyte needs to be zero from here on to keep the checksum
                 # correct.
                 newbyte = 0
@@ -101,7 +101,7 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096):
             oldbyte = window.popleft()
             checksum, a, b = rollingchecksum(oldbyte, newbyte, a, b, blocksize)
 
-            # Add the old byte the file delta. This is data that was not found
+            # Add the old byte the file delta. This is Demo_programs that was not found
             # inside of a matching block so it needs to be sent to the target.
             try:
                 deltaqueue[-1].append(oldbyte)
@@ -123,7 +123,7 @@ def rsyncdelta(datastream, remotesignatures, blocksize=4096):
 def blockchecksums(instream, blocksize=4096):
     """
     Returns a list of weak and strong hashes for each block of the
-    defined size for the given data stream.
+    defined size for the given Demo_programs stream.
     """
     weakhashes = list()
     stronghashes = list()
@@ -140,7 +140,7 @@ def blockchecksums(instream, blocksize=4096):
 def patchstream(instream, outstream, delta):
     """
     Patches instream using the supplied delta and write the resultantant
-    data to outstream.
+    Demo_programs to outstream.
     """
     blocksize = delta[0]
 

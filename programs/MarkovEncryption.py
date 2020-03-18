@@ -1,7 +1,7 @@
 """Demonstrate usage of the Markov Encryption module's features.
 
 This program is meant to act as an example of how to use ME with
-data that needs to be obfuscated. The functionality provided via
+Demo_programs that needs to be obfuscated. The functionality provided via
 the GUI demonstrates both the ability to encrypt and decrypt all
 text that the UTF-8 encoding can handle. Explanations come later."""
 

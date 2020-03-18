@@ -20,7 +20,6 @@ divmod;
 format_suffix;
 capitalize;
 Module;
-"SizeTree.__init__";
 main -> SizeTree;
 main -> abspath;
 main -> print;
@@ -48,6 +47,6 @@ format_bytes -> format;
 format_bytes -> format_suffix;
 partition_number -> divmod;
 format_suffix -> capitalize;
-Module -> "SizeTree.__init__";
+Module -> SizeTree;
 Module -> main;
 }

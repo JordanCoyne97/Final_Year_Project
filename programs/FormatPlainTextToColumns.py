@@ -25,7 +25,7 @@ class FormatColumns:
         self.positions = [0]*self.num_columns
 
     def format_line(self, wsre=re.compile(r'\s+')):
-        ''' Fill up a single row with data from the contents.
+        ''' Fill up a single row with Demo_programs from the contents.
         '''
         l = []
         data = False

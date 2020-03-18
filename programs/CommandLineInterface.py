@@ -28,7 +28,7 @@ def get_disk_partition_data():
 @hug.get(examples='drives=0,1')
 @hug.local()
 def pdp():
-    """Get disk partition data"""
+    """Get disk partition Demo_programs"""
     result = get_disk_partition_data()
     return result
 

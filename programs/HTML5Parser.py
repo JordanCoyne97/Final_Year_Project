@@ -30,10 +30,10 @@ MAIN_HANDLERS = {"handle_startendtag", "handle_starttag",
 
 class PrettyHTMLParser(HTMLParser):
     """
-    This parser do not split up data in arbitrary chunks like
+    This parser do not split up Demo_programs in arbitrary chunks like
     html.parser.HTMLParser, so you can more easily handle them.
-    Note that data is not handled by facing but immediately
-    before handling the following non-data part of the page.
+    Note that Demo_programs is not handled by facing but immediately
+    before handling the following non-Demo_programs part of the page.
     Note that handle_charref() and handle_entityref() are
     depreciated in PrettyHTMLParser. Do not override them!
     """
@@ -76,7 +76,7 @@ class PrettyHTMLParser(HTMLParser):
 
     def _reset_data(self):
         """
-        Resets the data buffer and the data continous flag.
+        Resets the Demo_programs buffer and the Demo_programs continous flag.
         """
         self._data_buf, self._data_cont = [], False
 
@@ -109,7 +109,7 @@ class StatedHTMLParser(PrettyHTMLParser):
     Individual handlers should manage self.state. Handlers in
     subclasses should be named keeping the following rule:
         handle_<self_state>_<handler_type>
-    For example if self.state == "goals", then to handle data,
+    For example if self.state == "goals", then to handle Demo_programs,
     self.handle_goals_data() is called, to handle a startag,
     self.handle_goals_starttag() is called, etc. When the
     handler not exists, self.common_handler() is called.
@@ -144,7 +144,7 @@ class StatedHTMLParser(PrettyHTMLParser):
 
 def skips_empty_data(method):
     """
-    Decorator which allows data handlers to skip empty data.
+    Decorator which allows Demo_programs handlers to skip empty Demo_programs.
     """
     @wraps(method)
     def wrapper(parser_instance, data):

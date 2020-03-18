@@ -1,6 +1,6 @@
 class PseudoStructure(object):
     """A fast, small-footprint, structure-like type suitable for use as
-    a data transfer or parameter object.
+    a Demo_programs transfer or parameter object.
 
     This class is not intended to be used directly. Subclasses should
     define the fields they care about as slots and (optionally) define

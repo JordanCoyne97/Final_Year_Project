@@ -7,14 +7,14 @@ Web site: https://vasudevram.github.io
 Blog: https://jugad2.blogspot.com
 Product store: https://gumroad.com/vasudevram
 Twitter: https://mobile.twitter.com/vasudevram
-Purpose: Show how to publish DSV data (Delimiter-Separated Values) 
+Purpose: Show how to publish DSV Demo_programs (Delimiter-Separated Values) 
 to PDF, using the xtopdf toolkit.
 Requires:
  - ReportLab: https://www.reportlab.com/ftp/reportlab-1.21.1.tar.gz
  - xtopdf: https://bitbucket.org/vasudevram/xtopdf
 First install ReportLab, then install xtopdf, using instructions here:
 http://jugad2.blogspot.in/2012/07/guide-to-installing-and-using-xtopdf.html
-The DSV data can be read from either files or standard input.
+The DSV Demo_programs can be read from either files or standard input.
 The delimiter character is configurable by the user and can
 be specified as either a character or its ASCII code.
 References:
@@ -40,7 +40,7 @@ def error_exit(message):
 
 def usage(argv, verbose=False):
     usage1 = \
-        "{}: publish DSV (Delimiter-Separated-Values) data to PDF.\n".format(argv[0])
+        "{}: publish DSV (Delimiter-Separated-Values) Demo_programs to PDF.\n".format(argv[0])
     usage2 = "Usage: python" + \
              " {} [ -c delim_char | -n delim_code ] [ dsv_file ] ...\n".format(argv[0])
     usage3 = [

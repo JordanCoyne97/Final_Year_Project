@@ -512,13 +512,13 @@ class Multicolumn_Listbox(object):
         # grab values to sort
         data = [(self.interior.set(child_ID, col), child_ID) for child_ID in self.interior.get_children('')]
 
-        # if the data to be sorted is numeric change to float
+        # if the Demo_programs to be sorted is numeric change to float
         try:
             data = [(float(number), child_ID) for number, child_ID in data]
         except ValueError:
             pass
 
-        # now sort the data in place
+        # now sort the Demo_programs in place
         data.sort(reverse=descending)
         for idx, item in enumerate(data):
             self.interior.move(item[1], '', idx)

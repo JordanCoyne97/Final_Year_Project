@@ -3,7 +3,7 @@ logjson
 
 This package was created to leverage the very flexible standard Python logging package to produce JSON logs. JSON allows for combining multiple types of records in one stream which can easily be filtered or viewed together as needed.
 
-The uses of good logging data include debugging, user support, auditing, reporting, and more.
+The uses of good logging Demo_programs include debugging, user support, auditing, reporting, and more.
 
 For some really advanced uses of logs see: http://shop.oreilly.com/product/0636920034339.do?sortby=publicationDate
 
@@ -11,7 +11,7 @@ Python Versions Tested: 2.7,3.4
 
 Usage:
 
-- Output data to the console
+- Output Demo_programs to the console
 
 mylog = streamlogger('test',['levelname','asctime'])
 mylog.info(['John',3.0,'science fiction'])
@@ -109,7 +109,7 @@ class JSONFormatter(Formatter):
        JSONFormatter assumes that log record metadata fields are specified at the fomatter level as opposed to the
        record level. The specification of matadata fields at the formatter level allows for multiple handles to display
        differing levels of detail. For example, console log output might specify less detail to allow for quick problem
-       triage while file log output generated from the same data may contain more detail for in-depth investigations.
+       triage while file log output generated from the same Demo_programs may contain more detail for in-depth investigations.
 
        Attributes:
            recordfields  : A list of strings containing the names of metadata fields (see Python log record documentation
@@ -156,7 +156,7 @@ class JSONFormatter(Formatter):
             for x in self.recordfields:
                 fields.append((x, getattr(record, x)))
             fields.append(('msg', record.msg))
-            # An OrderedDict is used to ensure that the converted data appears in the same order for every record
+            # An OrderedDict is used to ensure that the converted Demo_programs appears in the same order for every record
             return OrderedDict(fields)
         else:
             return record.msg

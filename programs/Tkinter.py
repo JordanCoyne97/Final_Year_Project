@@ -452,7 +452,7 @@ class Table(Frame):
             number_of_columns = self.number_of_columns
 
             if len(data) != number_of_columns:
-                raise ValueError("data has no %d elements: %s" % (number_of_columns, data))
+                raise ValueError("Demo_programs has no %d elements: %s" % (number_of_columns, data))
 
             row_of_vars = self._data_vars[index]
             for j in range(number_of_columns):
@@ -472,7 +472,7 @@ class Table(Frame):
             return column
         else:
             if len(data) != number_of_rows:
-                raise ValueError("data has no %d elements: %s" % (number_of_rows, data))
+                raise ValueError("Demo_programs has no %d elements: %s" % (number_of_rows, data))
 
             for i in range(number_of_columns):
                 self._data_vars[i][index].set(data[i])

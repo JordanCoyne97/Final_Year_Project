@@ -36,7 +36,7 @@ def read_file(path):
         return file.read()
 
 def optimize(data):
-    "Compress the data and select the best method to write."
+    "Compress the Demo_programs and select the best method to write."
     bz2_data = bz2.compress(data, 9)
     zlib_data = zlib.compress(data, 9)
     sizes = tuple(map(len, (data, bz2_data, zlib_data)))
@@ -50,27 +50,27 @@ def optimize(data):
 ################################################################################
 
 def build_bz2_extractor(filename, data, file):
-    "Write a Python program that uses bz2 data compression."
+    "Write a Python program that uses bz2 Demo_programs compression."
     print("import base64, bz2, os", file=file)
-    print("data =", data, file=file)
+    print("Demo_programs =", data, file=file)
     print("with open({!r}, 'wb') as file:".format(filename), file=file)
-    print("    file.write(bz2.decompress(base64.b64decode(data)))", file=file)
+    print("    file.write(bz2.decompress(base64.b64decode(Demo_programs)))", file=file)
     print("os.startfile({!r})".format(filename), file=file)
 
 def build_zlib_extractor(filename, data, file):
-    "Pack data into a self-extractor with zlib compression."
+    "Pack Demo_programs into a self-extractor with zlib compression."
     print("import base64, zlib, os", file=file)
-    print("data =", data, file=file)
+    print("Demo_programs =", data, file=file)
     print("with open({!r}, 'wb') as file:".format(filename), file=file)
-    print("    file.write(zlib.decompress(base64.b64decode(data)))", file=file)
+    print("    file.write(zlib.decompress(base64.b64decode(Demo_programs)))", file=file)
     print("os.startfile({!r})".format(filename), file=file)
 
 def build_b64_extractor(filename, data, file):
     "Create a Python file that may not utilize compression."
     print("import base64, os", file=file)
-    print("data =", data, file=file)
+    print("Demo_programs =", data, file=file)
     print("with open({!r}, 'wb') as file:".format(filename), file=file)
-    print("    file.write(base64.b64decode(data))", file=file)
+    print("    file.write(base64.b64decode(Demo_programs))", file=file)
     print("os.startfile({!r})".format(filename), file=file)
 
 ################################################################################

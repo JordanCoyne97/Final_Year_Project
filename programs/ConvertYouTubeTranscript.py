@@ -55,7 +55,7 @@ def printSrtLine(i, elms):
 fileName = sys.argv[1]
 
 def main(fileName):
-	"""Parse google's transcript and write the converted data in srt format."""
+	"""Parse google's transcript and write the converted Demo_programs in srt format."""
 	with open(sys.argv[1], 'r') as infile:
 		buf = []
 		for line in infile:

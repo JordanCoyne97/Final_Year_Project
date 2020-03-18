@@ -2,13 +2,13 @@ from collections import namedtuple
 from math import fsum
 
 def map_reduce(data, mapper, reducer=None):
-    '''Simple map/reduce for data analysis.
+    '''Simple map/reduce for Demo_programs analysis.
 
-    Each data element is passed to a *mapper* function.
+    Each Demo_programs element is passed to a *mapper* function.
     The mapper returns key/value pairs
-    or None for data elements to be skipped.
+    or None for Demo_programs elements to be skipped.
 
-    Returns a dict with the data grouped into lists.
+    Returns a dict with the Demo_programs grouped into lists.
     If a *reducer* is specified, it aggregates each list.
 
     >>> def even_odd(elem):                     # sample mapper

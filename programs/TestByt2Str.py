@@ -92,7 +92,7 @@ class BaseSixTest(PartitionTest):
 class BaseTenTest(PartitionTest):
 
     def setUp(self):
-        # Create some data needed for testing base ten.
+        # Create some Demo_programs needed for testing base ten.
         super().setUp()
         self.pn_base = 10
         self.results = ([1],

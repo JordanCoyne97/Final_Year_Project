@@ -14,7 +14,7 @@ class Int(int):
         return int.__le__(self, other)
 
 def count_cmps(f, data, k):
-    'Count comparisons in a call to f(k, data)'
+    'Count comparisons in a call to f(k, Demo_programs)'
     global cmps
     data = data[:]
     shuffle(data)

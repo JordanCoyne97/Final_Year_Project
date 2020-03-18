@@ -10,7 +10,7 @@ def compress(string):
     # Get the unique characters and numeric base.
     unique = set(string)
     base = len(unique)
-    # Create a key that will encode data properly.
+    # Create a key that will encode Demo_programs properly.
     key = random.sample(unique, base)
     mapping = dict(map(reversed, enumerate(key)))
     while not mapping[string[-1]]:
@@ -64,7 +64,7 @@ def test():
     # Get this program's source.
     txt = open(sys.argv[0], 'r').read().encode()
 
-    print('Length of data:', len(txt))
+    print('Length of Demo_programs:', len(txt))
 
     # Compress the source numerically.
     data, table = compress(txt)
@@ -74,11 +74,11 @@ def test():
     print('Total compressed size:', len(data + table))
     print('Compression ratio: {:%}'.format(len(data + table) / len(txt)))
 
-    # Decompress the data using the table.
+    # Decompress the Demo_programs using the table.
     new = decompress(data, table)
 
     print('Decompression was {}successful.'.format(('not ', '')[txt == new]))
-    print('Showing the decompressed data:')
+    print('Showing the decompressed Demo_programs:')
     print('==============================')
     print(new.decode())
 
