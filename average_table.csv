@@ -1,0 +1,8 @@
+Column,Min,Max,Mean,Std
+Number of nodes.ast,100,4813,908.264,879.54
+Number of edges.ast,99,4812,907.276,879.541
+Tree height.ast,9,24,12.782,2.447
+Number of nodes.call,5,81,27.126,15.467
+Number of edges.call,4,181,43.575,36.568
+Impurity of tree.call,0.0,0.793,0.327,0.197
+Number of self loops.call,0,8,0.816,1.435
